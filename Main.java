@@ -18,25 +18,19 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("File Browser and Search");
 
-
         directoryPathField = new TextField();
         directoryPathField.setPromptText("Enter directory path");
-
 
         searchField = new TextField();
         searchField.setPromptText("Enter search phrase");
 
-
         Button browseButton = new Button("Browse");
         browseButton.setOnAction(e -> browseDirectory());
 
-
         Button searchButton = new Button("Search");
-
 
         HBox hBox = new HBox(10, directoryPathField, browseButton);
         VBox vBox = new VBox(10, hBox, searchField, searchButton);
-
 
         Scene scene = new Scene(vBox, 600, 200);
         primaryStage.setScene(scene);
